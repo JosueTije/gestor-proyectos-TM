@@ -13,7 +13,6 @@ body {
     padding-bottom: 80px;
 }
 
-/* Navigation */
 header {
     background-color: rgba(255, 255, 255, 0.9);
     position: sticky;
@@ -61,7 +60,6 @@ nav a:hover {
     color: #c41e3a;
 }
 
-/* Main Content */
 main {
     flex: 1;
 }
@@ -168,7 +166,6 @@ main {
     font-size: 14px;
 }
 
-/* Footer */
 footer {
     background-color: rgba(255, 255, 255, 0.9);
     text-align: center;

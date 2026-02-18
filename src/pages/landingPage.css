@@ -33,7 +33,6 @@ body {
     min-height: 100vh;
 }
 
-/* Navigation */
 nav {
     background-color: white;
     padding: 15px 40px;
@@ -59,7 +58,6 @@ nav a:hover {
     color: #c41e3a;
 }
 
-/* Hero Section */
 .hero {
     text-align: center;
     color: white;
