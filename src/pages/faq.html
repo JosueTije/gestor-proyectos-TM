@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Gestor de Proyectos TechMahindra</title>
+    <link rel="stylesheet" href="faq.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="logo">TechMahindra</h1>
+                <ul class="nav-links">
+                    <li><a href="landingPage.html">Inicio</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#crear">Crear Proyecto</a></li>
+                    <li><a href="#ver">Ver Proyectos</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="faq-section">
+            <h2>Preguntas Frecuentes</h2>
+            <p class="faq-subtitle">Encuentra respuestas a las preguntas más comunes</p>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-button" onclick="toggleFaq(this)">
+                        <span class="faq-question">¿Quién soy?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-content">
+                        <p>Soy un desarrollador web apasionado.</p>
+                    </div>
+                </div>
+
+
+                <div class="faq-item">
+                    <button class="faq-button" onclick="toggleFaq(this)">
+                        <span class="faq-question">¿Dónde vivo?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-content">
+                        <p>Actualmente vivo en México.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-button" onclick="toggleFaq(this)">
+                        <span class="faq-question">¿Cuáles son mis habilidades principales?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-content">
+                        <p>Mis habilidades incluyen: HTML5, CSS3, JavaScript, React y Node.js.</p>
+                    </div>
+                </div>
+
+
+                <div class="faq-item">
+                    <button class="faq-button" onclick="toggleFaq(this)">
+                        <span class="faq-question">¿En qué proyectos he trabajado?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-content">
+                        <p>He trabajado en diversos proyectos como videjuegos en Unity, paginas web y apps en Android.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-button" onclick="toggleFaq(this)">
+                        <span class="faq-question">¿A dónde me voy de intercambio?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-content">
+                        <p>Aplique a distintos paises, como UK, Australia y China.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-button" onclick="toggleFaq(this)">
+                        <span class="faq-question">¿Cómo pueden contactarme?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-content">
+                        <p>Puedes contactarme por email, LinkedIn, GitHub, Instagram o teléfono.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 JosuéTijerina. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function toggleFaq(button) {
+            const faqItem = button.parentElement;
+            const content = faqItem.querySelector('.faq-content');
+            const icon = button.querySelector('.faq-icon');
+            
+            const allItems = document.querySelectorAll('.faq-item');
+            allItems.forEach(item => {
+                if (item !== faqItem && item.classList.contains('active')) {
+                    item.classList.remove('active');
+                    item.querySelector('.faq-icon').textContent = '+';
+                }
+            });
+            
+            faqItem.classList.toggle('active');
+            icon.textContent = faqItem.classList.contains('active') ? '-' : '+';
+        }
+    </script>
+</body>
+</html>
