@@ -7,19 +7,7 @@
     <link rel="stylesheet" href="verProyectos.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="nav-container">
-                <h1 class="logo">TechMahindra</h1>
-                <ul class="nav-links">
-                    <li><a href="landingPage.html">Inicio</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="#crear">Crear Proyecto</a></li>
-                    <li><a href="verProyectos.html">Ver Proyectos</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    <div id="header-placeholder"></div>
 
     <main>
         <section class="projects-section">
@@ -67,8 +55,21 @@
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 JosuéTijerina. Todos los derechos reservados.</p>
-    </footer>
+        <div id="footer-placeholder"></div>
+        <script>
+            // Cargar header y footer
+            document.addEventListener('DOMContentLoaded', function() {
+                fetch('header.html')
+                    .then(res => res.text())
+                    .then(data => {
+                        document.getElementById('header-placeholder').innerHTML = data;
+                    });
+                fetch('footer.html')
+                    .then(res => res.text())
+                    .then(data => {
+                        document.getElementById('footer-placeholder').innerHTML = data;
+                    });
+            });
+        </script>
 </body>
 </html>
