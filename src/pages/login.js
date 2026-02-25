@@ -20,7 +20,7 @@ function showMessage(msg, isError = false) {
     msgDiv.style.color = isError ? '#c41e3a' : '#4caf50';
 }
 
-const form = document.querySelector('form');
+const form = document.getElementById('login-form');
 if (form) {
     form.addEventListener('submit', function(e) {
         e.preventDefault();
@@ -30,6 +30,9 @@ if (form) {
             cred => cred.email === email && cred.password === password
         );
         if (found) {
+            // Guardar token de sesión y correo
+            localStorage.setItem('tm_token', 'usuario_activo');
+            localStorage.setItem('tm_email', email);
             showMessage('¡Login exitoso!');
             setTimeout(() => {
                 window.location.href = 'landingPage.html';

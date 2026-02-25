@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ver Proyectos - Gestor de Proyectos TechMahindra</title>
     <link rel="stylesheet" href="verProyectos.css">
+    <script src="sessionCheck.js"></script>
+    <script src="header&footer.js"></script>
 </head>
 <body>
     <div id="header-placeholder"></div>
@@ -56,20 +58,5 @@
     </main>
 
         <div id="footer-placeholder"></div>
-        <script>
-            // Cargar header y footer
-            document.addEventListener('DOMContentLoaded', function() {
-                fetch('header.html')
-                    .then(res => res.text())
-                    .then(data => {
-                        document.getElementById('header-placeholder').innerHTML = data;
-                    });
-                fetch('footer.html')
-                    .then(res => res.text())
-                    .then(data => {
-                        document.getElementById('footer-placeholder').innerHTML = data;
-                    });
-            });
-        </script>
 </body>
 </html>
