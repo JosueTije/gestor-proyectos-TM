@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="header.css">
+<header>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="landingPage.html" class="logo"><h1>TechMahindra</h1></a>
+            <ul class="nav-links">
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="#crear">Crear Proyecto</a></li>
+                <li><a href="verProyectos.html">Ver Proyectos</a></li>
+            </ul>
+            <div class="user-email" id="user-email"></div>
+        </div>
+    </header>
+<script>
+    // Mostrar correo del usuario si hay sesión
+    document.addEventListener('DOMContentLoaded', function() {
+        const token = localStorage.getItem('tm_token');
+        const email = localStorage.getItem('tm_email');
+        if (token && email) {
+            const userEmailDiv = document.getElementById('user-email');
+            if (userEmailDiv) userEmailDiv.textContent = email;
+        }
+    });
+</script>
+    </nav>
+</header>
