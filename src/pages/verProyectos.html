@@ -17,12 +17,47 @@
             <h2>Pokémones</h2>
             <p class="projects-subtitle">Explora pokémones obtenidos desde la PokeAPI</p>
 
-            <div class="projects-container" id="pokemon-container">
-                <p class="pokemon-loading">Cargando pokémones...</p>
+            <form id="controlsForm" class="pokedex-controls" aria-label="Filtros de Pokédex">
+                <input id="NameID" type="text" placeholder="Buscar por nombre o ID" autocomplete="off">
+
+                <select id="typeFilter" aria-label="Filtrar por tipo">
+                    <option value="">Todos los tipos</option>
+                </select>
+
+                <button type="submit">Aplicar</button>
+            </form>
+
+            <div class="projects-container" id="results" aria-live="polite" aria-busy="false"></div>
+
+            <div class="actions-row">
+                <button id="loadMore" type="button">Cargar más</button>
             </div>
         </section>
     </main>
 
-        <div id="footer-placeholder"></div>
+    <template id="pokemon-card-template">
+        <article class="project-card">
+            <div class="project-header">
+                <h3 class="pokemon-name"></h3>
+                <p class="pokemon-id"></p>
+            </div>
+            <div class="project-body">
+                <img class="pokemon-image card-img" src="" alt="">
+                <div class="project-meta pokemon-types types"></div>
+
+                <div class="card-group">
+                    <h4>Habilidades</h4>
+                    <ul class="ability-list"></ul>
+                </div>
+
+                <div class="card-group">
+                    <h4>Stats</h4>
+                    <ul class="stats-list"></ul>
+                </div>
+            </div>
+        </article>
+    </template>
+
+    <div id="footer-placeholder"></div>
 </body>
 </html>
