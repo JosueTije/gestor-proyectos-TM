@@ -77,6 +77,178 @@ main {
     opacity: 0.95;
 }
 
+.battle-controls {
+    max-width: 1200px;
+    margin: 0 auto 20px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 12px;
+}
+
+.battle-controls input,
+.battle-controls button {
+    border-radius: 10px;
+    border: none;
+    padding: 12px 14px;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.battle-controls input {
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #333;
+}
+
+.battle-controls button {
+    background-color: #fff;
+    color: #8b1528;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.battle-controls button:hover {
+    background-color: #f8d7dc;
+}
+
+.battle-arena {
+    max-width: 1200px;
+    margin: 0 auto 16px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.battle-side {
+    background-color: rgba(255, 255, 255, 0.98);
+    border-radius: 12px;
+    padding: 14px;
+    color: #333;
+    text-align: left;
+}
+
+.fighter-name {
+    font-size: 18px;
+    color: #8b1528;
+    margin-bottom: 8px;
+}
+
+.fighter-image {
+    width: 96px;
+    height: 96px;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.hp-track {
+    width: 100%;
+    height: 14px;
+    border-radius: 999px;
+    background-color: #ececec;
+    overflow: hidden;
+}
+
+.hp-fill {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #6bcf63 0%, #3d9f39 100%);
+    transition: width 0.35s ease;
+}
+
+.hp-text {
+    font-size: 13px;
+    margin-top: 6px;
+    font-weight: 700;
+}
+
+.battle-log {
+    max-width: 1200px;
+    margin: 0 auto 34px auto;
+    background-color: rgba(255, 255, 255, 0.94);
+    color: #333;
+    border-radius: 12px;
+    text-align: left;
+    padding: 12px;
+    min-height: 52px;
+}
+
+.battle-log-entry {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #efefef;
+}
+
+.battle-log-entry:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.battle-winner-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 20px;
+}
+
+.battle-winner-overlay[hidden] {
+    display: none;
+}
+
+.battle-winner-card {
+    width: 100%;
+    max-width: 360px;
+    background-color: #fff;
+    border-radius: 14px;
+    text-align: center;
+    padding: 24px 20px;
+    color: #333;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.winner-title {
+    font-size: 22px;
+    color: #8b1528;
+    font-weight: 800;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#winnerImage {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    margin: 0 auto 10px auto;
+    display: block;
+}
+
+#winnerName {
+    font-size: 24px;
+    margin-bottom: 16px;
+    color: #8b1528;
+}
+
+#closeWinnerOverlay {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 16px;
+    background-color: #8b1528;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#closeWinnerOverlay:hover {
+    background-color: #a31931;
+}
+
 .pokedex-controls {
     max-width: 1200px;
     margin: 0 auto 24px auto;
@@ -323,6 +495,11 @@ footer p {
     }
 
     .pokedex-controls {
+        grid-template-columns: 1fr;
+    }
+
+    .battle-controls,
+    .battle-arena {
         grid-template-columns: 1fr;
     }
     

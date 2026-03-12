@@ -14,6 +14,35 @@
 
     <main>
         <section class="projects-section">
+            <h2>Peleas Pokemon</h2>
+            <form id="battleForm" class="battle-controls" aria-label="Simulador de batalla Pokemon">
+                <input id="battlePokemonA" type="text" placeholder="Pokemon 1 (nombre o ID)" autocomplete="off" required>
+                <input id="battlePokemonB" type="text" placeholder="Pokemon 2 (nombre o ID)" autocomplete="off" required>
+                <button id="startBattle" type="submit">Iniciar batalla</button>
+            </form>
+
+            <section id="battleArena" class="battle-arena" aria-live="polite" hidden>
+                <div class="battle-side" id="fighterA">
+                    <h3 class="fighter-name">Pokemon 1</h3>
+                    <img class="fighter-image" src="" alt="">
+                    <div class="hp-track">
+                        <div class="hp-fill" id="hpFillA"></div>
+                    </div>
+                    <p class="hp-text" id="hpTextA">100%</p>
+                </div>
+
+                <div class="battle-side" id="fighterB">
+                    <h3 class="fighter-name">Pokemon 2</h3>
+                    <img class="fighter-image" src="" alt="">
+                    <div class="hp-track">
+                        <div class="hp-fill" id="hpFillB"></div>
+                    </div>
+                    <p class="hp-text" id="hpTextB">100%</p>
+                </div>
+            </section>
+
+            <div id="battleLog" class="battle-log" aria-live="polite"></div>
+
             <h2>Pokedex</h2>
             <form id="controlsForm" class="pokedex-controls" aria-label="Filtros de Pokédex">
                 <input id="NameID" type="text" placeholder="Buscar por nombre o ID" autocomplete="off">
@@ -55,6 +84,15 @@
             </div>
         </article>
     </template>
+
+    <div id="battleWinnerOverlay" class="battle-winner-overlay" hidden>
+        <div class="battle-winner-card">
+            <p class="winner-title">Ganador</p>
+            <img id="winnerImage" src="" alt="">
+            <h3 id="winnerName"></h3>
+            <button id="closeWinnerOverlay" type="button">Cerrar</button>
+        </div>
+    </div>
 
     <div id="footer-placeholder"></div>
 </body>
