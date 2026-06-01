@@ -7,6 +7,7 @@
 	const TURN_DELAY_MS = 950;
 
 	const els = {
+		
 		results: document.getElementById('results'),
 		tplCard: document.getElementById('pokemon-card-template'),
 		form: document.getElementById('controlsForm'),
